@@ -2,7 +2,6 @@
   "name": "fresh",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jiyongnoh.github.io",
   "scripts": {
     "dev": "next dev",
     "start": "next start",
