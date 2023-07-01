@@ -5,10 +5,11 @@
   "homepage": "http://jiyongnoh.github.io/Chatting-Web---Next.js",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && next export && touch out/.nojekyll && git add -f out/ && git push origin gh-pages"
+    "build": "next build && next export",
+    "predeploy": "npm run build",
+    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
