@@ -5,6 +5,7 @@ const nextConfig = {
   // images: {
   //   domains: ["cdn.pixabay.com"],
   // },
+  basePath: "/Chatting-Web---Next.js",
 };
 
 module.exports = nextConfig;

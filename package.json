@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build": "next build && next export",
+    "predeploy": "npm run build",
+    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -22,5 +24,8 @@
     "react-dom": "18.2.0",
     "socket.io": "^4.7.1",
     "socket.io-client": "^4.7.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
