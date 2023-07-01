@@ -2,11 +2,12 @@
   "name": "fresh",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://jiyongnoh.github.io/Chatting-Web---Next.js",
   "scripts": {
     "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build": "next build && next export",
     "predeploy": "npm run build",
     "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
