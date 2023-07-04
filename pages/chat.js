@@ -21,7 +21,9 @@ export default function Chatting() {
     setUsername(localStorage.getItem("id"));
 
     // 접속용 소켓 객체 생성
-    const socket = SocketIOClient.connect({ path: "/api/chat/socketio" });
+    const socket = SocketIOClient.connect({
+      path: "/Chatting-Web---Next.js/api/chat/socketio",
+    });
 
     // 소켓 연결 활성화
     // on: 소켓의 이벤트 발생 시, 데이터를 받아와 콜백을 실행하는 메서드. (eventName, callBack)
@@ -64,7 +66,10 @@ export default function Chatting() {
         message: sendMessage,
       };
 
-      const response = await axios.post("/api/chat", message);
+      const response = await axios.post(
+        "/Chatting-Web---Next.js/api/chat",
+        message
+      );
       // 이후 초기화
       setSendMessage("");
     }

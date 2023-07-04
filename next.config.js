@@ -2,7 +2,7 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  basePath: "/",
+  basePath: "/Chatting-Web---Next.js",
 };
 
 module.exports = nextConfig;

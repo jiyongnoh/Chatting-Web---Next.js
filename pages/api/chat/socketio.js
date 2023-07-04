@@ -6,7 +6,7 @@ export default async (req, res) => {
 
     const httpServer = res.socket.server;
     const io = new Server(httpServer, {
-      path: "/api/chat/socketio",
+      path: "/Chatting-Web---Next.js/api/chat/socketio",
     });
 
     res.socket.server.io = io;
