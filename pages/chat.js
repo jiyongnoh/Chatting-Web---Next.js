@@ -94,7 +94,7 @@ export default function Chatting() {
         </Stack>
         {/* 채팅 메시지 입력 영역 */}
         <Stack spacing={1} direction="row">
-          <TextField
+          <textarea
             id="chat-message-input"
             label="enter your message"
             variant="outlined"
@@ -106,7 +106,6 @@ export default function Chatting() {
             rows={2}
             fullWidth
             onKeyUp={enterKeyPress}
-            placeholder={connected ? "enter your message" : "Connecting...🕐"}
           />
           <Button
             type="submit"
