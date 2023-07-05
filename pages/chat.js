@@ -105,7 +105,7 @@ export default function Chatting() {
             multiline
             rows={2}
             fullWidth
-            onKeyPress={enterKeyPress}
+            onKeyUp={enterKeyPress}
             placeholder={connected ? "enter your message" : "Connecting...🕐"}
           />
           <Button
