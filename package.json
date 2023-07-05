@@ -2,7 +2,6 @@
   "name": "fresh",
   "version": "0.1.0",
   "private": true,
-  "homepage": "jiyongnoh.github.io/Chatting-Web---Next.js",
   "scripts": {
     "dev": "next dev",
     "start": "next start",

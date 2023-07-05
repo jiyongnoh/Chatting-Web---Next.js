@@ -22,7 +22,7 @@ export default function Chatting() {
 
     // 접속용 소켓 객체 생성
     const socket = SocketIOClient.connect({
-      path: "/Chatting-Web---Next.js/api/chat/socketio",
+      path: "/api/chat/socketio",
     });
 
     // 소켓 연결 활성화
@@ -66,10 +66,7 @@ export default function Chatting() {
         message: sendMessage,
       };
 
-      const response = await axios.post(
-        "/Chatting-Web---Next.js/api/chat",
-        message
-      );
+      const response = await axios.post("/api/chat", message);
       // 이후 초기화
       setSendMessage("");
     }
