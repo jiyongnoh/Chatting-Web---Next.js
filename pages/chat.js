@@ -21,7 +21,7 @@ export default function Chatting() {
     setUsername(localStorage.getItem("id"));
 
     // 접속용 소켓 객체 생성
-    const socket = SocketIOClient.connect({
+    const socket = SocketIOClient.connect("/", {
       path: "/api/chat/socketio",
     });
 
