@@ -93,7 +93,7 @@ export default function Chatting() {
           </Paper>
         </Stack>
         {/* 채팅 메시지 입력 영역 */}
-        <Stack spacing={1} direction="row">
+        <div>
           <textarea
             id="chat-message-input"
             label="enter your message"
@@ -105,18 +105,12 @@ export default function Chatting() {
             multiline
             rows={2}
             fullWidth
-            onKeyUp={enterKeyPress}
+            onKeyPress={enterKeyPress}
           />
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-            endIcon={<SendIcon />}
-            onClick={submitSendMessage}
-          >
+          <button type="submit" color="primary" onClick={submitSendMessage}>
             Send
-          </Button>
-        </Stack>
+          </button>
+        </div>
       </Stack>
     </div>
   );
