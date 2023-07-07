@@ -19,6 +19,7 @@
     "@mui/material": "^5.13.6",
     "@netlify/plugin-nextjs": "^4.39.0",
     "axios": "^1.4.0",
+    "dotenv": "^16.3.1",
     "install": "^0.13.0",
     "net": "^1.0.2",
     "next": "13.2.4",

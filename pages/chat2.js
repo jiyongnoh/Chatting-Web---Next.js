@@ -19,9 +19,8 @@ export default function Chatting() {
     // SSR 에서는 client(브라우저) 메서드인 localStorage를 사용할 수 없음
     // 그러므로 useEffect처럼 브라우저 렌더링이 완료된 뒤 실행되는 메서드에 넣어 값을 갱신해야 함.
     setUsername(localStorage.getItem("id"));
-
     // 접속용 소켓 객체 생성 - NodeJs
-    const socket = SocketIOClient("http://localhost:3002");
+    const socket = SocketIOClient(`${process.env.NEXT_PUBLIC_ENDPOINT}`);
 
     // 소켓 연결 활성화
     // on: 소켓의 이벤트 발생 시, 데이터를 받아와 콜백을 실행하는 메서드. (eventName, callBack)
@@ -64,7 +63,10 @@ export default function Chatting() {
         message: sendMessage,
       };
 
-      const response = await axios.post("http://localhost:3002", message);
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_ENDPOINT}`,
+        message
+      );
       // 이후 초기화
       setSendMessage("");
     }
