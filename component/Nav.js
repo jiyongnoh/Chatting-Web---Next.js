@@ -14,13 +14,19 @@ export default function Nav() {
           <Link href="/">Login</Link>
         </li>
         <li className={style.li}>
+          <Link href="/test">Test</Link>
+        </li>
+        <li className={style.li}>
           <Link href="/list">List</Link>
         </li>
         <li className={style.li}>
           <Link href="/cart">Cart</Link>
         </li>
         <li className={style.li}>
-          <Link href="/chat">실시간 채팅</Link>
+          <Link href="/chat">실시간 채팅 - nextjs</Link>
+        </li>
+        <li className={style.li}>
+          <Link href="/chat2">실시간 채팅 - nodejs</Link>
         </li>
       </ul>
     </nav>
